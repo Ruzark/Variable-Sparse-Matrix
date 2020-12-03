@@ -1,5 +1,5 @@
 #include "Matrix.h"
-// 
+
 Matrix::Matrix()
 {
 	n_ = 3;
