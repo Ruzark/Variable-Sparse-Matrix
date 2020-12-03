@@ -1,5 +1,5 @@
 #include "Matrix.h"
-
+// 
 Matrix::Matrix()
 {
 	n_ = 3;
@@ -7,7 +7,7 @@ Matrix::Matrix()
 	amount_ = 0;
 	pHead = nullptr;
 #ifdef DEBUG
-	std::cout << yellow << "Âûçâàëñÿ êîíñòðóêòîð " << blue << this << white << std::endl;
+	std::cout << yellow << "Ã‚Ã»Ã§Ã¢Ã Ã«Ã±Ã¿ ÃªÃ®Ã­Ã±Ã²Ã°Ã³ÃªÃ²Ã®Ã° " << blue << this << white << std::endl;
 	std::cout << std::endl;
 #endif
 
@@ -18,7 +18,7 @@ Matrix::~Matrix()
 	clear();
 #ifdef DEBUG
 	std::cout << std::endl;
-	std::cout << yellow << "Âûçâàëñÿ äåñòðóêòîð " << blue << this << white << std::endl;
+	std::cout << yellow << "Ã‚Ã»Ã§Ã¢Ã Ã«Ã±Ã¿ Ã¤Ã¥Ã±Ã²Ã°Ã³ÃªÃ²Ã®Ã° " << blue << this << white << std::endl;
 	std::cout << std::endl;
 #endif
 }
@@ -54,7 +54,7 @@ Matrix::Matrix(const Matrix& other)
 		} while (tmp_amount != 0);
 	}
 #ifdef DEBUG
-	std::cout << yellow << "Âûçâàëñÿ êîíñòðóêòîð êîïèðîâàíèÿ " << blue << this << white << std::endl;
+	std::cout << yellow << "Ã‚Ã»Ã§Ã¢Ã Ã«Ã±Ã¿ ÃªÃ®Ã­Ã±Ã²Ã°Ã³ÃªÃ²Ã®Ã° ÃªÃ®Ã¯Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¿ " << blue << this << white << std::endl;
 	std::cout << std::endl;
 #endif
 }
@@ -67,42 +67,42 @@ void Matrix::push_back(int x, int y, double value)
 	}
 	if (x >= n_ and y >= m_)
 	{
-		std::cout << red << "Îøèáêà ïðè äîáàâëåíèè ýëåìåíòà " << "x: " << blue << x << red << " y: " << blue << y << red <<" value: "<< blue << value << red<< " â ìàòðèöó " << blue << this << red << "\nÓêàçàííûå êîîðäèíàòû áîëüøå, ÷åì ðàçìåðíîñòü âàøåé ìàòðèöû!" << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << "x: " << blue << x << red << " y: " << blue << y << red <<" value: "<< blue << value << red<< " Ã¢ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ " << blue << this << red << "\nÃ“ÃªÃ Ã§Ã Ã­Ã­Ã»Ã¥ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã» Ã¡Ã®Ã«Ã¼Ã¸Ã¥, Ã·Ã¥Ã¬ Ã°Ã Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»!" << white << std::endl;
 		show_matrix_demension();
 		std::cout << std::endl;
 		return;
 	}
 	if (x >= n_)
 	{
-		std::cout << red << "Îøèáêà ïðè äîáàâëåíèè ýëåìåíòà " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " â ìàòðèöó " << blue << this << red << "\nÓêàçàííàÿ êîîðäèíàòà x áîëüøå, ÷åì ðàçìåðíîñòü âàøåé ìàòðèöû!" << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " Ã¢ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ " << blue << this << red << "\nÃ“ÃªÃ Ã§Ã Ã­Ã­Ã Ã¿ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã  x Ã¡Ã®Ã«Ã¼Ã¸Ã¥, Ã·Ã¥Ã¬ Ã°Ã Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»!" << white << std::endl;
 		show_matrix_demension();
 		std::cout << std::endl;
 		return;
 	}
 	if (y >= m_)
 	{
-		std::cout << red << "Îøèáêà ïðè äîáàâëåíèè ýëåìåíòà " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " â ìàòðèöó " << blue << this << red << "\nÓêàçàííàÿ êîîðäèíàòà y áîëüøå, ÷åì ðàçìåðíîñòü âàøåé ìàòðèöû!" << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " Ã¢ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ " << blue << this << red << "\nÃ“ÃªÃ Ã§Ã Ã­Ã­Ã Ã¿ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã  y Ã¡Ã®Ã«Ã¼Ã¸Ã¥, Ã·Ã¥Ã¬ Ã°Ã Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»!" << white << std::endl;
 		show_matrix_demension();
 		std::cout << std::endl;
 		return;
 	}
 	if (x < 0 and y < 0)
 	{
-		std::cout << red << "Îøèáêà ïðè äîáàâëåíèè ýëåìåíòà " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " â ìàòðèöó " << blue << this << red << "\nÓêàçàííûå êîîðäèíàòû ìåíüøå, ÷åì ðàçìåðíîñòü âàøåé ìàòðèöû!" << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " Ã¢ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ " << blue << this << red << "\nÃ“ÃªÃ Ã§Ã Ã­Ã­Ã»Ã¥ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã» Ã¬Ã¥Ã­Ã¼Ã¸Ã¥, Ã·Ã¥Ã¬ Ã°Ã Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»!" << white << std::endl;
 		show_matrix_demension();
 		std::cout << std::endl;
 		return;
 	}
 	if (x < 0)
 	{
-		std::cout << red << "Îøèáêà ïðè äîáàâëåíèè ýëåìåíòà " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " â ìàòðèöó "<<blue << this <<red << "\nÓêàçàííàÿ êîîðäèíàòà x ìåíüøå, ÷åì ðàçìåðíîñòü âàøåé ìàòðèöû!" << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " Ã¢ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ "<<blue << this <<red << "\nÃ“ÃªÃ Ã§Ã Ã­Ã­Ã Ã¿ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã  x Ã¬Ã¥Ã­Ã¼Ã¸Ã¥, Ã·Ã¥Ã¬ Ã°Ã Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»!" << white << std::endl;
 		show_matrix_demension();
 		std::cout << std::endl;
 		return;
 	}
 	if (y < 0)
 	{
-		std::cout << red << "Îøèáêà ïðè äîáàâëåíèè ýëåìåíòà " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " â ìàòðèöó "<<blue <<this<<red <<"\nÓêàçàííàÿ êîîðäèíàòà y ìåíüøå, ÷åì ðàçìåðíîñòü âàøåé ìàòðèöû!" << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " Ã¢ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ "<<blue <<this<<red <<"\nÃ“ÃªÃ Ã§Ã Ã­Ã­Ã Ã¿ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã  y Ã¬Ã¥Ã­Ã¼Ã¸Ã¥, Ã·Ã¥Ã¬ Ã°Ã Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»!" << white << std::endl;
 		std::cout << std::endl;
 		show_matrix_demension();
 		std::cout << std::endl;
@@ -157,42 +157,42 @@ void Matrix::push_front(int x, int y, double value)
 	}
 	if (x >= n_ and y >= m_)
 	{
-		std::cout << red << "Îøèáêà ïðè äîáàâëåíèè ýëåìåíòà " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " â ìàòðèöó " << blue << this << red << "\nÓêàçàííûå êîîðäèíàòû áîëüøå, ÷åì ðàçìåðíîñòü âàøåé ìàòðèöû!" << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " Ã¢ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ " << blue << this << red << "\nÃ“ÃªÃ Ã§Ã Ã­Ã­Ã»Ã¥ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã» Ã¡Ã®Ã«Ã¼Ã¸Ã¥, Ã·Ã¥Ã¬ Ã°Ã Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»!" << white << std::endl;
 		show_matrix_demension();
 		std::cout << std::endl;
 		return;
 	}
 	if (x >= n_)
 	{
-		std::cout << red << "Îøèáêà ïðè äîáàâëåíèè ýëåìåíòà " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " â ìàòðèöó " << blue << this << red << "\nÓêàçàííàÿ êîîðäèíàòà x áîëüøå, ÷åì ðàçìåðíîñòü âàøåé ìàòðèöû!" << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " Ã¢ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ " << blue << this << red << "\nÃ“ÃªÃ Ã§Ã Ã­Ã­Ã Ã¿ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã  x Ã¡Ã®Ã«Ã¼Ã¸Ã¥, Ã·Ã¥Ã¬ Ã°Ã Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»!" << white << std::endl;
 		show_matrix_demension();
 		std::cout << std::endl;
 		return;
 	}
 	if (y >= m_)
 	{
-		std::cout << red << "Îøèáêà ïðè äîáàâëåíèè ýëåìåíòà " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " â ìàòðèöó " << blue << this << red << "\nÓêàçàííàÿ êîîðäèíàòà y áîëüøå, ÷åì ðàçìåðíîñòü âàøåé ìàòðèöû!" << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " Ã¢ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ " << blue << this << red << "\nÃ“ÃªÃ Ã§Ã Ã­Ã­Ã Ã¿ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã  y Ã¡Ã®Ã«Ã¼Ã¸Ã¥, Ã·Ã¥Ã¬ Ã°Ã Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»!" << white << std::endl;
 		show_matrix_demension();
 		std::cout << std::endl;
 		return;
 	}
 	if (x < 0 and y < 0)
 	{
-		std::cout << red << "Îøèáêà ïðè äîáàâëåíèè ýëåìåíòà " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " â ìàòðèöó " << blue << this << red << "\nÓêàçàííûå êîîðäèíàòû ìåíüøå, ÷åì ðàçìåðíîñòü âàøåé ìàòðèöû!" << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " Ã¢ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ " << blue << this << red << "\nÃ“ÃªÃ Ã§Ã Ã­Ã­Ã»Ã¥ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã» Ã¬Ã¥Ã­Ã¼Ã¸Ã¥, Ã·Ã¥Ã¬ Ã°Ã Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»!" << white << std::endl;
 		show_matrix_demension();
 		std::cout << std::endl;
 		return;
 	}
 	if (x < 0)
 	{
-		std::cout << red << "Îøèáêà ïðè äîáàâëåíèè ýëåìåíòà " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " â ìàòðèöó " << blue << this << red << "\nÓêàçàííàÿ êîîðäèíàòà x ìåíüøå, ÷åì ðàçìåðíîñòü âàøåé ìàòðèöû!" << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " Ã¢ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ " << blue << this << red << "\nÃ“ÃªÃ Ã§Ã Ã­Ã­Ã Ã¿ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã  x Ã¬Ã¥Ã­Ã¼Ã¸Ã¥, Ã·Ã¥Ã¬ Ã°Ã Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»!" << white << std::endl;
 		show_matrix_demension();
 		std::cout << std::endl;
 		return;
 	}
 	if (y < 0)
 	{
-		std::cout << red << "Îøèáêà ïðè äîáàâëåíèè ýëåìåíòà " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " â ìàòðèöó " << blue << this << red << "\nÓêàçàííàÿ êîîðäèíàòà y ìåíüøå, ÷åì ðàçìåðíîñòü âàøåé ìàòðèöû!" << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << "x: " << blue << x << red << " y: " << blue << y << red << " value: " << blue << value << red << " Ã¢ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ " << blue << this << red << "\nÃ“ÃªÃ Ã§Ã Ã­Ã­Ã Ã¿ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã  y Ã¬Ã¥Ã­Ã¼Ã¸Ã¥, Ã·Ã¥Ã¬ Ã°Ã Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»!" << white << std::endl;
 		std::cout << std::endl;
 		show_matrix_demension();
 		std::cout << std::endl;
@@ -208,7 +208,7 @@ void Matrix::pop_front()
 	Node* temp = pHead;
 	if (pHead == nullptr)
 	{
-		std::cout << red << "Â ìàòðèöå " << blue << this << red << " åù¸ íåò íåíóëåâûõ êîýôôèöèåíòîâ, óäàëÿòü íå÷åãî" << white << std::endl;
+		std::cout << red << "Ã‚ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã¥ " << blue << this << red << " Ã¥Ã¹Â¸ Ã­Ã¥Ã² Ã­Ã¥Ã­Ã³Ã«Ã¥Ã¢Ã»Ãµ ÃªÃ®Ã½Ã´Ã´Ã¨Ã¶Ã¨Ã¥Ã­Ã²Ã®Ã¢, Ã³Ã¤Ã Ã«Ã¿Ã²Ã¼ Ã­Ã¥Ã·Ã¥Ã£Ã®" << white << std::endl;
 		std::cout << std::endl;
 		return;
 	}
@@ -224,7 +224,7 @@ void Matrix::remove(int x, int y)
 {
 	if (pHead == nullptr)
 	{
-		std::cout << red << "Â ñïèñêå íåò íåíóëåâûõ êîýôôèöèåíòîâ, óäàëÿòü íå÷åãî" << white << std::endl;
+		std::cout << red << "Ã‚ Ã±Ã¯Ã¨Ã±ÃªÃ¥ Ã­Ã¥Ã² Ã­Ã¥Ã­Ã³Ã«Ã¥Ã¢Ã»Ãµ ÃªÃ®Ã½Ã´Ã´Ã¨Ã¶Ã¨Ã¥Ã­Ã²Ã®Ã¢, Ã³Ã¤Ã Ã«Ã¿Ã²Ã¼ Ã­Ã¥Ã·Ã¥Ã£Ã®" << white << std::endl;
 		std::cout << std::endl;
 		return;
 	}
@@ -254,7 +254,7 @@ void Matrix::remove(int x, int y)
 		} while (temp != nullptr);
 		if (check == false)
 		{
-			std::cout << red << "Íå íàéäåíî çàäàííûõ êîîðäèíàò " << blue << x << ";" << y <<red << " ,óäàëÿòü íå÷åãî" <<white << std::endl;
+			std::cout << red << "ÃÃ¥ Ã­Ã Ã©Ã¤Ã¥Ã­Ã® Ã§Ã Ã¤Ã Ã­Ã­Ã»Ãµ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã² " << blue << x << ";" << y <<red << " ,Ã³Ã¤Ã Ã«Ã¿Ã²Ã¼ Ã­Ã¥Ã·Ã¥Ã£Ã®" <<white << std::endl;
 			std::cout << std::endl;
 		}
 		else
@@ -284,14 +284,14 @@ void Matrix::clear()
 
 int Matrix::get_amount()
 {
-	std::cout << red << "Êîëè÷åñòâî íåíóëåâûõ êîýôôèöèåíòîâ â ðàçðåæåííîé ìàòðèöå " << blue << this <<red<<" ðàâíî: " << blue << amount_ << white << std::endl;
+	std::cout << red << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã­Ã¥Ã­Ã³Ã«Ã¥Ã¢Ã»Ãµ ÃªÃ®Ã½Ã´Ã´Ã¨Ã¶Ã¨Ã¥Ã­Ã²Ã®Ã¢ Ã¢ Ã°Ã Ã§Ã°Ã¥Ã¦Ã¥Ã­Ã­Ã®Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã¥ " << blue << this <<red<<" Ã°Ã Ã¢Ã­Ã®: " << blue << amount_ << white << std::endl;
 	std::cout << std::endl;
 	return amount_;
 }
 
 void Matrix::show_matrix()
 {
-	std::cout << red << "Ìàòðèöà: " << blue << this << std::endl;
+	std::cout << red << "ÃŒÃ Ã²Ã°Ã¨Ã¶Ã : " << blue << this << std::endl;
 	std::cout << std::endl;
 	Node* temp = pHead;
 	if (temp == nullptr)
@@ -342,7 +342,7 @@ void Matrix::show_matrix()
 
 void Matrix::show_list()
 {
-	std::cout << "Ñïèñîê " << this << std::endl;
+	std::cout << "Ã‘Ã¯Ã¨Ã±Ã®Ãª " << this << std::endl;
 	std::cout << std::endl;
 	Node* temp = pHead;
 	do
@@ -356,11 +356,11 @@ double Matrix::get_element(int x, int y)
 {
 	if (x < 0 or x >= n_)
 	{
-		std::cout << red << "Îøèáêà ïðè âçÿòèè ýëåìåíòà, ïðîâåðüòå êîîðäèíàòó x " << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¢Ã§Ã¿Ã²Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã , Ã¯Ã°Ã®Ã¢Ã¥Ã°Ã¼Ã²Ã¥ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã³ x " << std::endl;
 	}
 	if (y < 0 or y >= m_)
 	{
-		std::cout << red << "Îøèáêà ïðè âçÿòèè ýëåìåíòà, ïðîâåðüòå êîîðäèíàòó x " << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã¢Ã§Ã¿Ã²Ã¨Ã¨ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã , Ã¯Ã°Ã®Ã¢Ã¥Ã°Ã¼Ã²Ã¥ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã³ x " << std::endl;
 	}
 	bool check = false;
 	Node* temp = pHead;
@@ -417,13 +417,13 @@ void Matrix::set_element(int x, int y, double value)
 void Matrix::keyboard_input(Matrix &_new )
 {
 	_new.clear();
-	std::cout << yellow << "Ââåäèòå êîëè÷åñòâî ñòðîê âàøåé ìàòðèöû: " << white;
+	std::cout << yellow << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã±Ã²Ã°Ã®Ãª Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»: " << white;
 	do
 	{
 		std::cin >> _new.n_;
 	}while (_new.n_ < 1); 
 	std::cout << std::endl;
-	std::cout << yellow << "Ââåäèòå êîë÷åñòâî ñòîëáöîâ âàøåé ìàòðèöû: " << white;
+	std::cout << yellow << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã«Ã·Ã¥Ã±Ã²Ã¢Ã® Ã±Ã²Ã®Ã«Ã¡Ã¶Ã®Ã¢ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»: " << white;
 	do {
 		std::cin >> _new.m_;
 	}while (_new.m_ < 1);
@@ -432,7 +432,7 @@ void Matrix::keyboard_input(Matrix &_new )
 		for (int j = 0; j < _new.m_; ++j)
 		{
 			double data;
-			std::cout << "Ââåäèòå ýëåìåíò íà " << i << " ñòðîêå " << j << " ñòîëáöà" << std::endl;
+			std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã² Ã­Ã  " << i << " Ã±Ã²Ã°Ã®ÃªÃ¥ " << j << " Ã±Ã²Ã®Ã«Ã¡Ã¶Ã " << std::endl;
 			std::cin >> data;
 			std::cout << std::endl;
 			push_back(i, j, data);
@@ -448,11 +448,11 @@ void Matrix::txt_input(std::string _path)
 	fin.open(path);
 	if (!fin.is_open())
 	{
-		std::cout << red << "Îøèáêà ïðè îòêðûòèè ôàéëà" << white <<std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã®Ã²ÃªÃ°Ã»Ã²Ã¨Ã¨ Ã´Ã Ã©Ã«Ã " << white <<std::endl;
 	}
 	else
 	{
-		std::cout << green << "Ôàéë " << blue << path << green << " óñïåøíî îòêðûò " << white << std::endl;
+		std::cout << green << "Ã”Ã Ã©Ã« " << blue << path << green << " Ã³Ã±Ã¯Ã¥Ã¸Ã­Ã® Ã®Ã²ÃªÃ°Ã»Ã² " << white << std::endl;
 		for (int i = 0; i < n_; ++i)
 		{
 			for (int j = 0; j < m_; ++j)
@@ -475,12 +475,12 @@ void Matrix::txt_output(std::string _path)
 	fout.open(path);
 	if (!fout.is_open())
 	{
-		std::cout << red << "Îøèáêà ïðè îòêðûòèè ôàéëà " << blue << path << white << std::endl;
+		std::cout << red << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã®Ã²ÃªÃ°Ã»Ã²Ã¨Ã¨ Ã´Ã Ã©Ã«Ã  " << blue << path << white << std::endl;
 		return;
 	}
 	else
 	{
-		fout << red << "Ìàòðèöà: " << blue << this << std::endl;
+		fout << red << "ÃŒÃ Ã²Ã°Ã¨Ã¶Ã : " << blue << this << std::endl;
 		std::cout << std::endl;
 		Node* temp = pHead;
 		if (temp == nullptr)
@@ -539,7 +539,7 @@ void Matrix::add_matrices(const Matrix &other)
 
 		if (first == nullptr and second == nullptr)
 		{
-			std::cout << red <<"Â îáåèõ ìàòðèöàõ íåò êîýôôèöèåíòîâ, ñêëàäûâàòü íå÷åãî" <<white << std::endl;
+			std::cout << red <<"Ã‚ Ã®Ã¡Ã¥Ã¨Ãµ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã Ãµ Ã­Ã¥Ã² ÃªÃ®Ã½Ã´Ã´Ã¨Ã¶Ã¨Ã¥Ã­Ã²Ã®Ã¢, Ã±ÃªÃ«Ã Ã¤Ã»Ã¢Ã Ã²Ã¼ Ã­Ã¥Ã·Ã¥Ã£Ã®" <<white << std::endl;
 			std::cout << std::endl;
 		}
 		if (first == nullptr and second != nullptr)
@@ -553,7 +553,7 @@ void Matrix::add_matrices(const Matrix &other)
 		}
 		if (first != nullptr and second == nullptr)
 		{
-			std::cout << red <<"Â äîáàâëÿåìîé ìàòðèöå íåò êîýôôèöèåíòîâ, ïðèáàâëÿòü íå÷åãî " <<white << std::endl;
+			std::cout << red <<"Ã‚ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¿Ã¥Ã¬Ã®Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã¥ Ã­Ã¥Ã² ÃªÃ®Ã½Ã´Ã´Ã¨Ã¶Ã¨Ã¥Ã­Ã²Ã®Ã¢, Ã¯Ã°Ã¨Ã¡Ã Ã¢Ã«Ã¿Ã²Ã¼ Ã­Ã¥Ã·Ã¥Ã£Ã® " <<white << std::endl;
 			std::cout << std::endl;
 		}
 		if (first != nullptr and second != nullptr)
@@ -586,7 +586,7 @@ void Matrix::add_matrices(const Matrix &other)
 	}
 	else
 	{
-		std::cout << red << "Ìàòðèöû ðàçíûõ ðàçìåðîâ íåëüçÿ ñêëàäûâàòü " <<white<< std::endl;
+		std::cout << red << "ÃŒÃ Ã²Ã°Ã¨Ã¶Ã» Ã°Ã Ã§Ã­Ã»Ãµ Ã°Ã Ã§Ã¬Ã¥Ã°Ã®Ã¢ Ã­Ã¥Ã«Ã¼Ã§Ã¿ Ã±ÃªÃ«Ã Ã¤Ã»Ã¢Ã Ã²Ã¼ " <<white<< std::endl;
 		std::cout<< std::endl;
 	}
 	edit_matrix();
@@ -629,7 +629,7 @@ void Matrix::subtract(const Matrix& other)
 		Node* second = other.pHead;
 		if (first == nullptr and second == nullptr)
 		{
-			std::cout<<red << "Â îáåèõ ìàòðèöàõ íåò êîýôôèöèåíòîâ, îòíèìàòü íå÷åãî" << white<< std::endl;
+			std::cout<<red << "Ã‚ Ã®Ã¡Ã¥Ã¨Ãµ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã Ãµ Ã­Ã¥Ã² ÃªÃ®Ã½Ã´Ã´Ã¨Ã¶Ã¨Ã¥Ã­Ã²Ã®Ã¢, Ã®Ã²Ã­Ã¨Ã¬Ã Ã²Ã¼ Ã­Ã¥Ã·Ã¥Ã£Ã®" << white<< std::endl;
 			std::cout << std::endl;
 			return;
 		}
@@ -643,7 +643,7 @@ void Matrix::subtract(const Matrix& other)
 		}
 		if (first != nullptr and second == nullptr)
 		{
-			std::cout<<red << "Â âû÷èòàåìîé ìàòðèöå íåò êîýôôèöèåíòîâ, îòíèìàòü íå÷åãî " << white<<std::endl;
+			std::cout<<red << "Ã‚ Ã¢Ã»Ã·Ã¨Ã²Ã Ã¥Ã¬Ã®Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã¥ Ã­Ã¥Ã² ÃªÃ®Ã½Ã´Ã´Ã¨Ã¶Ã¨Ã¥Ã­Ã²Ã®Ã¢, Ã®Ã²Ã­Ã¨Ã¬Ã Ã²Ã¼ Ã­Ã¥Ã·Ã¥Ã£Ã® " << white<<std::endl;
 			std::cout << std::endl;
 			return;
 		}
@@ -677,7 +677,7 @@ void Matrix::subtract(const Matrix& other)
 	}
 	else
 	{
-		std::cout << red<< "Íåëüçÿ âû÷èòàòü ìàòðèöû ðàçíîãî ðàçìåðà" <<white<< std::endl;
+		std::cout << red<< "ÃÃ¥Ã«Ã¼Ã§Ã¿ Ã¢Ã»Ã·Ã¨Ã²Ã Ã²Ã¼ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã» Ã°Ã Ã§Ã­Ã®Ã£Ã® Ã°Ã Ã§Ã¬Ã¥Ã°Ã " <<white<< std::endl;
 		std::cout << std::endl;
 		return;
 	}
@@ -718,7 +718,7 @@ void Matrix::multiply(Matrix& const other)
 {
 	if (m_ != other.n_)
 	{
-		std::cout<<red << "Óìíîæåíèå íåâîçìîæíî" << white<<std::endl;
+		std::cout<<red << "Ã“Ã¬Ã­Ã®Ã¦Ã¥Ã­Ã¨Ã¥ Ã­Ã¥Ã¢Ã®Ã§Ã¬Ã®Ã¦Ã­Ã®" << white<<std::endl;
 		return;
 	}
 	if (m_ < other.m_)
@@ -773,13 +773,13 @@ void Matrix::devide(double number)
 	Node* first = pHead;
 	if (number == 0)
 	{
-		std::cout << red << "Íó êóäà íà íîëü äåëèøü, íåëüçÿ :)" << white << std::endl;
+		std::cout << red << "ÃÃ³ ÃªÃ³Ã¤Ã  Ã­Ã  Ã­Ã®Ã«Ã¼ Ã¤Ã¥Ã«Ã¨Ã¸Ã¼, Ã­Ã¥Ã«Ã¼Ã§Ã¿ :)" << white << std::endl;
 		std::cout << std::endl;
 		return;
 	}
 	if (first == nullptr)
 	{
-		std::cout << red << "Â ìàòðèöå " << blue << this << red << " åù¸ íåò íåíóëåâûõ êîýôôèöèåíîâ, ìàòðèöà íå èçìåíèëàñü " << white << std::endl;
+		std::cout << red << "Ã‚ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã¥ " << blue << this << red << " Ã¥Ã¹Â¸ Ã­Ã¥Ã² Ã­Ã¥Ã­Ã³Ã«Ã¥Ã¢Ã»Ãµ ÃªÃ®Ã½Ã´Ã´Ã¨Ã¶Ã¨Ã¥Ã­Ã®Ã¢, Ã¬Ã Ã²Ã°Ã¨Ã¶Ã  Ã­Ã¥ Ã¨Ã§Ã¬Ã¥Ã­Ã¨Ã«Ã Ã±Ã¼ " << white << std::endl;
 		std::cout << std::endl;
 		return;
 	}
@@ -819,7 +819,7 @@ double Matrix::determinant()
 {
 	if (n_ != m_)
 	{
-		std::cout << "Äëÿ ýòîé ìàòðèöû íåëüçÿ íàéòè îïðåäåëèòåëü" << std::endl;
+		std::cout << "Ã„Ã«Ã¿ Ã½Ã²Ã®Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã» Ã­Ã¥Ã«Ã¼Ã§Ã¿ Ã­Ã Ã©Ã²Ã¨ Ã®Ã¯Ã°Ã¥Ã¤Ã¥Ã«Ã¨Ã²Ã¥Ã«Ã¼" << std::endl;
 		return 0;
 	}
 	if (this->n_ == 1)
@@ -1096,7 +1096,7 @@ Matrix Matrix::operator/(const double number)
 
 void Matrix::show_matrix_demension()
 {
-	std::cout << red << "Ðàçìåðíîñòü âàøåé ìàòðèöû:" << " (" << blue << n_ << "x" << blue << m_ << red << ")" << white << std::endl;
+	std::cout << red << "ÃÃ Ã§Ã¬Ã¥Ã°Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã Ã¸Ã¥Ã© Ã¬Ã Ã²Ã°Ã¨Ã¶Ã»:" << " (" << blue << n_ << "x" << blue << m_ << red << ")" << white << std::endl;
 	std::cout << std::endl;
 }
 
